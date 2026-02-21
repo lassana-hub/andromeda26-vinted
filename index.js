@@ -28,7 +28,7 @@ app.use("/", offerRoutes);
 
 app.use(cors());
 app.get("/", (req, res) => {
-  res.status.json("Welcome to my projetct on NorthFlank");
+  res.status(200).json("Welcome to my projetct on NorthFlank");
 });
 // créer Catch-all route : qui intercepte toiutes les requêtes
 // qui ne correespondent à aucune route définie plus haut
