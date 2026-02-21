@@ -7,8 +7,9 @@ const mongoose = require("mongoose");
 const app = express();
 app.use(express.json()); // pour lire de body des requêtes
 
-// importer la package dotenv
-require("dotenv").config(); // Permet d'activer les variables d'environnement qui se trouvent dans le fichier `.env`
+// importer la package "dotenv"
+// qui permet d'activer les variables d'environnement qui se trouvent dans le fichier `.env`
+require("dotenv").config(); //
 
 // Création d'une connection à la base de données
 mongoose.connect(process.env.MONGODB_URI); // "mongodb://localhost/vinted"
@@ -17,7 +18,7 @@ mongoose.connect(process.env.MONGODB_URI); // "mongodb://localhost/vinted"
 const userRoutes = require("./routes/user");
 const offerRoutes = require("./routes/offer");
 
-// Utilisation de routes importées
+// Utilisation de routes importés
 app.use("/user", userRoutes);
 app.use("/", offerRoutes);
 
@@ -29,7 +30,7 @@ app.all(/.*/, (req, res) => {
   });
 });
 
-// Démmarer le serveur au port 3000
+// Démmarage du serveur au port 3000
 app.listen(process.env.PORT, () => {
   console.log("Serveur satrted 🚀");
 });

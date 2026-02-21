@@ -7,9 +7,11 @@ const express = require("express");
 const router = express.Router();
 // import de fileupload, package qui permet via un middleware de rendre les formdata lisibles à nos routes
 const fileUpload = require("express-fileupload");
+const convertToBase64 = require("../utils/convertToBase64");
 // import de cloudinary
 const cloudinary = require("cloudinary").v2;
-const convertToBase64 = require("../utils/convertToBase64");
+
+// importer les modules
 const Offer = require("../models/Offer");
 
 // Connexion à mon compte cloudinary
