@@ -47,7 +47,7 @@ router.post(
 
       const { title, description, price, condition, city, brand, size, color } =
         req.body;
-      const { picture } = req.files;
+      //const { picture } = req.files;
 
       // const salt = uid2(16); // générere une chaîne de caractères aléatoires de 16bit
       // const hash = SHA256(password + salt).toString(encBase64);
